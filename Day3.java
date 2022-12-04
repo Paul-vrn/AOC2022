@@ -31,7 +31,7 @@ public class Day3 {
                 for (int i = 0; i < elf3.length; i++){
                     container3.put(elf3[i], true);
                 }
-                int m = Math.max(container1.keySet().size(), Math.max(container2.keySet().size(), container3.keySet().size()));
+                int m = Math.min(container1.keySet().size(), Math.min(container2.keySet().size(), container3.keySet().size()));
                 if (container1.keySet().size() ==m) {
                     for (char letter : container1.keySet()){
                         if (container2.containsKey(letter) && container3.containsKey(letter)){
